@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  /* Surf Culture Color Palette */
+  --ocean-deep: #1a4d6e;
+  --ocean-light: #4a90a4;
+  --sunset-orange: #e87a41;
+  --sunset-gold: #f4a93b;
+  --sand: #f5f0e6;
+  --drift-wood: #8b7355;
+  --foam-white: #fefefe;
+  --coral: #e85d5d;
+
+  --background: var(--sand);
+  --foreground: var(--ocean-deep);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ocean-deep: var(--ocean-deep);
+  --color-ocean-light: var(--ocean-light);
+  --color-sunset-orange: var(--sunset-orange);
+  --color-sunset-gold: var(--sunset-gold);
+  --color-sand: var(--sand);
+  --color-drift-wood: var(--drift-wood);
+  --color-foam-white: var(--foam-white);
+  --color-coral: var(--coral);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Typography for retro surf feel */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
