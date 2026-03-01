@@ -28,7 +28,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-ocean-deep mb-1">
           Name
@@ -38,7 +38,7 @@ export default function ContactForm() {
           id="name"
           name="name"
           required
-          className="w-full px-4 py-3 border border-sand rounded-lg focus:outline-none focus:ring-2 focus:ring-sunset-orange focus:border-transparent"
+          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-sand rounded-lg focus:outline-none focus:ring-2 focus:ring-sunset-orange focus:border-transparent"
           placeholder="Your name"
         />
       </div>
@@ -52,7 +52,7 @@ export default function ContactForm() {
           id="email"
           name="email"
           required
-          className="w-full px-4 py-3 border border-sand rounded-lg focus:outline-none focus:ring-2 focus:ring-sunset-orange focus:border-transparent"
+          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-sand rounded-lg focus:outline-none focus:ring-2 focus:ring-sunset-orange focus:border-transparent"
           placeholder="you@example.com"
         />
       </div>
@@ -65,7 +65,7 @@ export default function ContactForm() {
           id="subject"
           name="subject"
           required
-          className="w-full px-4 py-3 border border-sand rounded-lg focus:outline-none focus:ring-2 focus:ring-sunset-orange focus:border-transparent bg-white"
+          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-sand rounded-lg focus:outline-none focus:ring-2 focus:ring-sunset-orange focus:border-transparent bg-white"
         >
           <option value="">Select a topic...</option>
           <option value="custom-board">Custom Board Inquiry</option>
@@ -86,8 +86,8 @@ export default function ContactForm() {
           id="message"
           name="message"
           required
-          rows={5}
-          className="w-full px-4 py-3 border border-sand rounded-lg focus:outline-none focus:ring-2 focus:ring-sunset-orange focus:border-transparent resize-none"
+          rows={4}
+          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-sand rounded-lg focus:outline-none focus:ring-2 focus:ring-sunset-orange focus:border-transparent resize-none"
           placeholder="Tell us about what you're looking for..."
         />
       </div>
@@ -95,19 +95,19 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full bg-sunset-orange hover:bg-sunset-gold text-foam-white font-semibold py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-sunset-orange hover:bg-sunset-gold text-foam-white font-semibold py-2.5 sm:py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
       >
         {status === "loading" ? "Sending..." : "Send Message"}
       </button>
 
       {status === "success" && (
-        <p className="text-green-600 text-center">
-          Thanks for reaching out! We'll get back to you soon.
+        <p className="text-green-600 text-center text-sm sm:text-base">
+          Thanks for reaching out! We&apos;ll get back to you soon.
         </p>
       )}
 
       {status === "error" && (
-        <p className="text-red-600 text-center">
+        <p className="text-red-600 text-center text-sm sm:text-base">
           Something went wrong. Please try again.
         </p>
       )}

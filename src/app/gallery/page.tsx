@@ -22,23 +22,23 @@ export default function GalleryPage() {
   return (
     <div className="bg-sand">
       {/* Hero Section */}
-      <section className="bg-ocean-deep text-foam-white py-16 md:py-24">
+      <section className="bg-ocean-deep text-foam-white py-12 sm:py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Gallery</h1>
-          <p className="text-xl text-ocean-light">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Gallery</h1>
+          <p className="text-base sm:text-lg md:text-xl text-ocean-light">
             A look at some of our work
           </p>
         </div>
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-8 sm:py-12 md:py-24">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6">
             {galleryItems.map((item, index) => (
               <div
                 key={index}
-                className="relative aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer group"
+                className="relative aspect-square rounded-md sm:rounded-lg overflow-hidden shadow-md sm:shadow-lg hover:shadow-xl transition-shadow cursor-pointer group"
               >
                 <Image
                   src={item.src}
@@ -50,8 +50,8 @@ export default function GalleryPage() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-drift-wood text-lg">
+          <div className="mt-8 sm:mt-12 text-center px-4">
+            <p className="text-drift-wood text-sm sm:text-base md:text-lg">
               Follow us on Instagram for more photos and updates.
             </p>
           </div>
