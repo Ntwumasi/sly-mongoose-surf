@@ -58,8 +58,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-ocean-light mt-8 pt-8 text-center text-ocean-light">
+        <div className="border-t border-ocean-light mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center text-ocean-light">
           <p>&copy; {new Date().getFullYear()} Sly Mongoose Surf. All rights reserved.</p>
+          <Link
+            href="/admin/login"
+            className="mt-4 sm:mt-0 text-sm text-ocean-light/60 hover:text-sunset-gold transition-colors"
+          >
+            Admin
+          </Link>
         </div>
       </div>
     </footer>
